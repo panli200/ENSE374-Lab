@@ -6,40 +6,47 @@ public class EmployeeApplication {
 	
 	public static void main(String[] args)
     {
-		// eD=employeeId
-    	Employee[] employeeId = new Employee[3];
+		// eD=>employeeData
+    	Employee[] employeeData = new Employee[3];
      
-		/**Variable not used, do we delete this line:
-		int eDSize = 0;
+		/**
+		 	Variable not used, do we delete this line:
+			int eDSize = 0;
 		*/
-    	//eA=employeeArray
+    	//eA=>employeeArray
 		EmployeeApplication employeeArray = new EmployeeApplication();
-		employeeArray.addEs(employeeId);
-		employeeArray.prints(employeeId);
+		employeeArray.addEs(employeeData);
+		employeeArray.prints(employeeData);
 		Employee[] sorted = new Employee[3];
-		sorted = employeeArray.sorteDByName(employeeId,3);
+		sorted = employeeArray.sorteDByName(employeeData,3);
 		employeeArray.prints(sorted);
 
     }
 
-
+/**
+   sort employee by the last name, and save the sorted employee information
+ */
 	public Employee[] sorteDByName(Employee[] database, int databaseSize)
     {
 		//srtD=>sortedDatabase
 		 Employee[] sortedDatabase = database;
 		 
-		 
+		 /**
+		  * for all employee data get sorted by their last name 
+		  */
         for(int i=1; i<(databaseSize); i++)
         {
-        	
-   
+        	/**
+        	 * compare the two data besides and sort
+        	 */
         	
             for(int j=0; j<(databaseSize-i); j++)
             {
             	/**
-            	getIn() not clear parameter should getIn
-            	we add parameter getlastName()
-            	 */
+            	*getIn() not clear parameter should getIn
+            	*we add parameter getlastName()
+            	*use temper database hold the data need swap
+            	*/
                 if (sortedDatabase[j].getlastName().compareTo(sortedDatabase[j+1].getlastName())>0)
                 {
                 	Employee temp = sortedDatabase[j+1];
@@ -50,8 +57,10 @@ public class EmployeeApplication {
         }
         return sortedDatabase;
     }
-
-	public void addEs(Employee[] employeeId)
+/**
+ 	get employee information from input
+ */
+	public void addEs(Employee[] employeeData)
 	{	
 		//Import 'Scanner(java.util)
 		Scanner input = new Scanner(System.in);
@@ -65,7 +74,7 @@ public class EmployeeApplication {
 		 */
 		for (int i = 0; i < 3; ++i)
 		{
-			employeeId[i] = new Employee();
+			employeeData[i] = new Employee();
 			System.out.print("Enter an Employee's First Name: ");
 			String firstName = input.nextLine();
 			System.out.print("Enter an Employee's Last  Name: ");
@@ -79,21 +88,22 @@ public class EmployeeApplication {
 			System.out.print("Enter an Employee's starting Salary: ");
 			String startSalary = input.nextLine();
 
-			employeeId[i].setSTUFFUP(firstName, lastName, address,  phoneNumber, hireDate,  startSalary);
+			employeeData[i].setSTUFFUP(firstName, lastName, address,  phoneNumber, hireDate,  startSalary);
 
 
 
 		}
 	}
-
-	public void prints(Employee[] employeeId)
-	{	/**
-	 	
-	 	*/
+	/**
+ 		print the employee information 
+ 	*/
+	public void prints(Employee[] employeeData)
+	{	
+	
 		
 		for (int i = 0; i < 3; ++i)
 		{
-			employeeId[i].printEmployeeData();
+			employeeData[i].printEmployeeData();
 
 		}
 
