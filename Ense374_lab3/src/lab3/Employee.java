@@ -3,14 +3,14 @@ package lab3;
 public class Employee {
 		//fNam replaced by "firstName"
 	    private String firstName;
-	    //lastName replaced by "lastName"
+	    //lN replaced by "lastName"
 	    private String lastName;
-	    //address replaced by "addresses"
+	    //addr replaced by "addresses"
 	    private String address;
-	    //phoneNumber replaced by "phoneNumber"
+	    //NUM replaced by "phoneNumber"
 	    private String phoneNumber;
 	    private String hireDate;
-	    //startSalary replaced by"startSalary"
+	    //dol replaced by"startSalary"
 	    private String startSalary;
 
 	    public Employee (){}

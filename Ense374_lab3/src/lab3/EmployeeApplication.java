@@ -57,11 +57,11 @@ public class EmployeeApplication {
 		Scanner input = new Scanner(System.in);
 		
 		/**change these unclear variable name:
-		 firstName=firstName
-		 lastName=lastName
-		 address=addressess
-		 phoneNumber=phonephoneNumberber
-		 startSalary=startSalary
+		 fNam=firstName
+		 lN=lastName
+		 addr=address
+		 NUM=phoneNumber
+		 dol=startSalary
 		 */
 		for (int i = 0; i < 3; ++i)
 		{
@@ -70,9 +70,9 @@ public class EmployeeApplication {
 			String firstName = input.nextLine();
 			System.out.print("Enter an Employee's Last  Name: ");
 			String lastName = input.nextLine();
-			System.out.print("Enter an Employee's addressess: ");
+			System.out.print("Enter an Employee's address: ");
 			String address = input.nextLine();
-			System.out.print("Enter an Employee's Phone phoneNumberber: ");
+			System.out.print("Enter an Employee's Phone Number: ");
 			String phoneNumber = input.nextLine();
 			System.out.print("Enter an Employee's Hire Date: ");
 			String hireDate = input.nextLine();
