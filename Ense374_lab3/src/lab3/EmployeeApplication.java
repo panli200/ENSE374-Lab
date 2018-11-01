@@ -9,7 +9,9 @@ public class EmployeeApplication {
 		//eD=employeeId
     	Employee[] eD = new Employee[3];
      
+		/**Variable not used, do we delete this line:
 		int eDSize = 0;
+		*/
 		EmployeeApplication eA = new EmployeeApplication();
 		eA.addEs(eD);
 		eA.prints(eD);
@@ -32,10 +34,11 @@ public class EmployeeApplication {
         	
             for(int j=0; j<(databaseSize-i); j++)
             {
-            	
-            	
-            	
-                if (srtD[j].getlN().compareTo(srtD[j+1].getlN())>0)
+            	/**
+            	getIn() no parameter pass 
+            	we add parameter lastName
+            	 */
+                if (srtD[j].getlN(lastName).compareTo(srtD[j+1].getlN(lastName))>0)
                 {
                    
                 	
@@ -52,27 +55,33 @@ public class EmployeeApplication {
 	{	
 		//Import 'Scanner(java.util)
 		Scanner input = new Scanner(System.in);
-
 		
-		
-
+		/**change these unclear variable name:
+		 firstName=firstName
+		 lastName=lastName
+		 address=addressess
+		 phoneNumber=phonephoneNumberber
+		 startSalary=startSalary
+		 */
 		for (int i = 0; i < 3; ++i)
 		{
 			eD[i] = new Employee();
 			System.out.print("Enter an Employee's First Name: ");
-			String fName = input.nextLine();
+			String firstName = input.nextLine();
 			System.out.print("Enter an Employee's Last  Name: ");
-			String lName = input.nextLine();
-			System.out.print("Enter an Employee's Address: ");
-			String addr = input.nextLine();
-			System.out.print("Enter an Employee's Phone Number: ");
-			String NUM = input.nextLine();
+			String lastName = input.nextLine();
+			System.out.print("Enter an Employee's addressess: ");
+			String address = input.nextLine();
+			System.out.print("Enter an Employee's Phone phoneNumberber: ");
+			String phoneNumber = input.nextLine();
 			System.out.print("Enter an Employee's Hire Date: ");
 			String hireDate = input.nextLine();
 			System.out.print("Enter an Employee's starting Salary: ");
-			String dol = input.nextLine();
+			String startSalary = input.nextLine();
 
-			eD[i].setSTUFFUP(fName, lName, addr,  NUM, hireDate,  dol);
+			
+			
+			eD[i].setSTUFFUP(firstName, lastName, address,  phoneNumber, hireDate,  startSalary);
 
 
 
