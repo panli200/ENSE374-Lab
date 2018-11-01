@@ -6,12 +6,13 @@ public class EmployeeApplication {
 	
 	public static void main(String[] args)
     {
-		//eD=employeeId
+		// eD=employeeId
     	Employee[] eD = new Employee[3];
      
 		/**Variable not used, do we delete this line:
 		int eDSize = 0;
 		*/
+    	//eA=employeeArray
 		EmployeeApplication eA = new EmployeeApplication();
 		eA.addEs(eD);
 		eA.prints(eD);
@@ -24,6 +25,7 @@ public class EmployeeApplication {
 
 	public Employee[] sorteDByName(Employee[] database, int databaseSize)
     {
+		//srtD=>sortedDatabase
 		 Employee[] srtD = database;
 		 
 		 
@@ -35,13 +37,11 @@ public class EmployeeApplication {
             for(int j=0; j<(databaseSize-i); j++)
             {
             	/**
-            	getIn() no parameter pass 
-            	we add parameter lastName
+            	getIn() not clear parameter should getIn
+            	we add parameter getlastName()
             	 */
-                if (srtD[j].getlN(lastName).compareTo(srtD[j+1].getlN(lastName))>0)
+                if (srtD[j].getlastName().compareTo(srtD[j+1].getlastName())>0)
                 {
-                   
-                	
                 	Employee temp = srtD[j+1];
                     srtD[j+1] = srtD[j];
                     srtD[j] = temp;
@@ -57,11 +57,11 @@ public class EmployeeApplication {
 		Scanner input = new Scanner(System.in);
 		
 		/**change these unclear variable name:
-		 fNam=firstName
-		 lN=lastName
-		 addr=address
-		 NUM=phoneNumber
-		 dol=startSalary
+		 fNam=>firstName
+		 lN=>lastName
+		 addr=>address
+		 NUM=>phoneNumber
+		 dol=>startSalary
 		 */
 		for (int i = 0; i < 3; ++i)
 		{
@@ -79,8 +79,6 @@ public class EmployeeApplication {
 			System.out.print("Enter an Employee's starting Salary: ");
 			String startSalary = input.nextLine();
 
-			
-			
 			eD[i].setSTUFFUP(firstName, lastName, address,  phoneNumber, hireDate,  startSalary);
 
 
@@ -89,9 +87,9 @@ public class EmployeeApplication {
 	}
 
 	public void prints(Employee[] eD)
-	{
-		
-		
+	{	/**
+	 	
+	 	*/
 		
 		for (int i = 0; i < 3; ++i)
 		{
