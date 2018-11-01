@@ -8,7 +8,7 @@ public class EmployeeApplication {
     {
 		//eD=employeeId
     	Employee[] eD = new Employee[3];
-    	//eDSize 
+     
 		int eDSize = 0;
 		EmployeeApplication eA = new EmployeeApplication();
 		eA.addEs(eD);
@@ -58,9 +58,6 @@ public class EmployeeApplication {
 
 		for (int i = 0; i < 3; ++i)
 		{
-			
-			
-			
 			eD[i] = new Employee();
 			System.out.print("Enter an Employee's First Name: ");
 			String fName = input.nextLine();
@@ -89,9 +86,6 @@ public class EmployeeApplication {
 		
 		for (int i = 0; i < 3; ++i)
 		{
-			
-			
-
 			eD[i].printEmployeeData();
 
 		}

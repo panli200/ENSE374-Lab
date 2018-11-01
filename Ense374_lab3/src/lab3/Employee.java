@@ -1,49 +1,54 @@
 package lab3;
 
 public class Employee {
-	 private String fNam;
-	    private String lN;
-	    private String addr;
-	    private String NUM;
+		//fNam replaced by "firstName"
+	    private String firstName;
+	   //lastName replaced by "lastName"
+	    private String lastName;
+	    //address replaced by "addresses"
+	    private String address;
+	    //phoneNumber replaced by "phonephoneNumberber"
+	    private String phoneNumber;
 	    private String hireDate;
-	    private String dol;
+	    //startSalary replaced by"startSalary"
+	    private String startSalary;
 
 	    public Employee (){}
 
-	    public void setSTUFFUP(String fNam, String lN, String addr, String NUM,
-	    String hireDate, String dol)
+	    public void setSTUFFUP(String firstName, String lastName, String address, String phoneNumber,
+	    String hireDate, String startSalary)
 	    {
-	        this.fNam = fNam;
-	        this.lN = lN;
-	        this.addr = addr;
-	        this.NUM = NUM;
+	        this.firstName = firstName;
+	        this.lastName = lastName;
+	        this.address = address;
+	        this.phoneNumber = phoneNumber;
 	        this.hireDate = hireDate;
-	        this.dol = dol;
+	        this.startSalary = startSalary;
 	    }
 
-	    public String getfNam()
+	    public String getfirstName()
 	    {
-	        return this.fNam;
+	        return this.firstName;
 	    }
 
-	    public void setfNam(String fNam)
+	    public void setfirstName(String firstName)
 	    {
-	        this.fNam = fNam;
+	        this.firstName = firstName;
 	    }
 
-	    public String getlN()
+	    public String getlastName()
 	    {
-	        return this.lN;
+	        return this.lastName;
 	    }
 
-	    public String getaddr()
+	    public String getaddress()
 	    {
-	        return this.addr;
+	        return this.address;
 	    }
 
-	    public String getNUM()
+	    public String getphoneNumber()
 	    {
-	        return this.NUM;
+	        return this.phoneNumber;
 	    }
 
 	    public String getHireDate()
@@ -51,22 +56,22 @@ public class Employee {
 	        return this.hireDate;
 	    }
 
-	    public String getdol()
+	    public String getstartSalary()
 	    {
-	        return this.dol;
+	        return this.startSalary;
 	    }
 
 	    public void printEmployeeData()
 	    {
 	        System.out.format(
-	            "Name: %s %s| addr: %s| Phone Number: %s|" +
-	            " Hire Date: %s| dol: %s \n",
-	            this.fNam,
-	            this.lN,
-	            this.addr,
-	            this.NUM,
+	            "Name: %s %s| address: %s| Phone phoneNumberber: %s|" +
+	            " Hire Date: %s| startSalary: %s \n",
+	            this.firstName,
+	            this.lastName,
+	            this.address,
+	            this.phoneNumber,
 	            this.hireDate,
-	            this.dol);
+	            this.startSalary);
 	    }
 
 }
