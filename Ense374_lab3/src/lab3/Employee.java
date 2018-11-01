@@ -64,7 +64,7 @@ public class Employee {
 	    public void printEmployeeData()
 	    {
 	        System.out.format(
-	            "Name: %s %s| address: %s| Phone phoneNumberber: %s|" +
+	            "Name: %s %s| address: %s| Phone Number: %s|" +
 	            " Hire Date: %s| startSalary: %s \n",
 	            this.firstName,
 	            this.lastName,
