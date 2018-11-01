@@ -1,11 +1,14 @@
 package lab3;
 
-public class EmployeeApplication {
-	//test
+import java.util.Scanner;
 
+public class EmployeeApplication {
+	
 	public static void main(String[] args)
     {
+		//eD=employeeId
     	Employee[] eD = new Employee[3];
+    	//eDSize 
 		int eDSize = 0;
 		EmployeeApplication eA = new EmployeeApplication();
 		eA.addEs(eD);
@@ -19,14 +22,24 @@ public class EmployeeApplication {
 
 	public Employee[] sorteDByName(Employee[] database, int databaseSize)
     {
-        Employee[] srtD = database;
+		 Employee[] srtD = database;
+		 
+		 
         for(int i=1; i<(databaseSize); i++)
         {
+        	
+        	
+        	
             for(int j=0; j<(databaseSize-i); j++)
             {
+            	
+            	
+            	
                 if (srtD[j].getlN().compareTo(srtD[j+1].getlN())>0)
                 {
-                    Employee temp = srtD[j+1];
+                   
+                	
+                	Employee temp = srtD[j+1];
                     srtD[j+1] = srtD[j];
                     srtD[j] = temp;
                 }
@@ -36,11 +49,18 @@ public class EmployeeApplication {
     }
 
 	public void addEs(Employee[] eD)
-	{
+	{	
+		//Import 'Scanner(java.util)
 		Scanner input = new Scanner(System.in);
+
+		
+		
 
 		for (int i = 0; i < 3; ++i)
 		{
+			
+			
+			
 			eD[i] = new Employee();
 			System.out.print("Enter an Employee's First Name: ");
 			String fName = input.nextLine();
@@ -64,8 +84,13 @@ public class EmployeeApplication {
 
 	public void prints(Employee[] eD)
 	{
+		
+		
+		
 		for (int i = 0; i < 3; ++i)
 		{
+			
+			
 
 			eD[i].printEmployeeData();
 
