@@ -1,7 +1,12 @@
 package lab3;
 
 import java.util.Scanner;
-
+/**
+ * @author panli
+ * This class for get employee information from input 
+ * Sorting the employee data by their last name
+ * print all the information collected
+ */
 public class EmployeeApplication {
 	
 	public static void main(String[] args)
@@ -10,8 +15,8 @@ public class EmployeeApplication {
     	Employee[] employeeData = new Employee[3];
      
 		/**
-		 	Variable not used, do we delete this line:
-			int eDSize = 0;
+		*Variable not used, do we delete this line:
+		*int eDSize = 0;
 		*/
     	//eA=>employeeArray
 		EmployeeApplication employeeArray = new EmployeeApplication();
@@ -39,7 +44,6 @@ public class EmployeeApplication {
         	/**
         	 * compare the two data besides and sort
         	 */
-        	
             for(int j=0; j<(databaseSize-i); j++)
             {
             	/**
