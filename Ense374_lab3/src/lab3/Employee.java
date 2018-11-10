@@ -16,16 +16,10 @@ public class Employee {
 	    private String hireDate;
 	    //dol replaced by"startSalary"
 	    private String startSalary;
-
+	    
+	    //default Employee constructor
 	    public Employee (){}
-/**
- * @param firstName
- * @param lastName
- * @param address
- * @param phoneNumber
- * @param hireDate
- * @param startSalary
- */
+
 	    public void setSTUFFUP(String firstName, String lastName, String address, String phoneNumber,
 	    String hireDate, String startSalary)
 	    {
@@ -37,14 +31,14 @@ public class Employee {
 	        this.startSalary = startSalary;
 	    }
 /**
- * @return employee first name of employee
+ * @return employee firstName
  */
 	    public String getfirstName()
 	    {
 	        return this.firstName;
 	    }
 /**
- * @param first name of employee
+ * @param firstName of employee
  */
 	    public void setfirstName(String firstName)
 	    {

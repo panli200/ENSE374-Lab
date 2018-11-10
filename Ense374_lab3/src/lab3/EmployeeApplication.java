@@ -29,7 +29,9 @@ public class EmployeeApplication {
     }
 
 /**
-   sort employee by the last name, and save the sorted employee information
+ * @param database for hold data for employee
+ * @param databaseSize is the size of database
+ * @return the sortedDatabase 
  */
 	public Employee[] sorteDByName(Employee[] database, int databaseSize)
     {
@@ -62,7 +64,7 @@ public class EmployeeApplication {
         return sortedDatabase;
     }
 /**
- 	get employee information from input
+ * @param employeeData for save the employee data
  */
 	public void addEs(Employee[] employeeData)
 	{	
@@ -99,8 +101,8 @@ public class EmployeeApplication {
 		}
 	}
 	/**
- 		print the employee information 
- 	*/
+	 * @param employeeData  for save the employee data properly
+	 */
 	public void prints(Employee[] employeeData)
 	{	
 	
