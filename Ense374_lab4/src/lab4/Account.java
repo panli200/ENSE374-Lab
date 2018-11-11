@@ -12,15 +12,13 @@ public class Account {
 	protected double depositAmount;	
 	protected double withdrawAmount;
 	/**
-	 * 
+	 * Constructor
 	 * @param initialBalance
-	 * constructor no return type and has the same name as the class
 	 */
-	public Account(double initialBalance)
+	public Account (double initialBalance)
 	{
 		balanceAmount=initialBalance;
 	}
-	
 	
 	/**
 	 * print balance information
@@ -31,21 +29,9 @@ public class Account {
 		
 	}
 	/**
-	 * 
+	 * boolean for checking the withdraw is ok
 	 * @param withdrawAmount
-	 * @return
+	 * @return true or false
 	 */
-	public boolean withdraw(double withdrawAmount)
-	{
-		if(withdrawAmount>balanceAmount) {
-			System.out.println("Over the limit!");
-			return false;
-		}else {
-			balanceAmount-=withdrawAmount;
-	
-			return true;
-		}
-		
-	}
 	
 }

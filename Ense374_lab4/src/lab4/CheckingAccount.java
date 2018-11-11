@@ -5,6 +5,7 @@ package lab4;
  *
  */
 public class CheckingAccount extends Account {
+	//checking account has month fee double type 
 	double monthFee=8.0;
 	/**
 	 * Constructor
@@ -34,12 +35,28 @@ public class CheckingAccount extends Account {
 		return withdrawAmount;
 	}
 	/**
-	 * 
-	 * @return balance amount
+	 * get new balance of checking account
+	 * @return balance amount deduct month fee
 	 */
 	public double getbalance()
+	{	
+		return balanceAmount-monthFee;
+	}
+	/**
+	 * boolean to check the withdraw is valid
+	 * @param withdrawAmount
+	 * @return
+	 */
+	public boolean withdraw(double withdrawAmount)
 	{
-		return balanceAmount;
+		if(withdrawAmount>balanceAmount) {
+			System.out.println("Over the limit!");
+			return false;
+		}else {
+			balanceAmount-=withdrawAmount;
+	
+			return true;
+		}
 	}
 	/**
 	 * print information after withdraw from checking account

@@ -37,7 +37,7 @@ public class SavingAccount extends Account{
 	}
 	
 	/** 
-	 * setbalance()
+	 * set balance amount 
 	 * @param balance is bank balanceAmount
 	 */
 	public void setbalance(double balance)
