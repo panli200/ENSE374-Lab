@@ -1,67 +1,50 @@
 package lab4;
 /**
- * 
- * @author panli
+ * ENSE374 LAB4
+ * @author Li Pan
  * The class Account is bank account it has child class SavingAccount and CheckingAccount
  * It includes protected data and functions
  */
 
 public class Account {
-	protected double balanceAmount=0;
-	protected double monthlyInterestRate;
+	//protected data can used by inheritance class
+	protected double balanceAmount;
+	protected double depositAmount;	
+	protected double withdrawAmount;
+	/**
+	 * 
+	 * @param initialBalance
+	 * constructor no return type and has the same name as the class
+	 */
+	public Account(double initialBalance)
+	{
+		balanceAmount=initialBalance;
+	}
 	
-	/**
-	 * default constructor of Account
-	 */
-	Account(){
-		
-	}
-	/**
-	 * 
-	 * @param balance is bank balance amount
-	 */
-	public void setbalance(double balance)
-	{
-		balanceAmount=balance;
-	}
-	/**
-	 * 
-	 * @param rate is the monthly intrest rate
-	 */
-	public void setmonthlyInterestRate(double rate)
-	{
-		monthlyInterestRate=rate;
-	}
-	/**
-	 * 
-	 * @return monthlyInterestRate
-	 */
-	public double getmonthlyInterestRate()
-	{
-		return monthlyInterestRate;
-	}
-	/**
-	 * 
-	 * @return balanceAmount
-	 */
-	public double getBalance(){
-		return balanceAmount;
-	}
-	/**
-	 * 
-	 * @return montlyInterestRate/2
-	 */
-	public double getbiweeklyInterestRate() {
-		return monthlyInterestRate/2;
-	}
+	
 	/**
 	 * print balance information
 	 */
 	public void printInfo()
 	{
-		String output="Please enter monthly interest rate:"+getmonthlyInterestRate()+
-				"\nOriginal balance:"+balanceAmount;
-		System.out.println(output);		
+		System.out.println("\nOriginal balance:"+balanceAmount);
+		
+	}
+	/**
+	 * 
+	 * @param withdrawAmount
+	 * @return
+	 */
+	public boolean withdraw(double withdrawAmount)
+	{
+		if(withdrawAmount>balanceAmount) {
+			System.out.println("Over the limit!");
+			return false;
+		}else {
+			balanceAmount-=withdrawAmount;
+	
+			return true;
+		}
 		
 	}
 	
