@@ -11,6 +11,7 @@ public class Account {
 	protected double balanceAmount;
 	protected double depositAmount;	
 	protected double withdrawAmount;
+	
 	/**
 	 * Constructor
 	 * @param initialBalance
@@ -18,20 +19,17 @@ public class Account {
 	public Account (double initialBalance)
 	{
 		balanceAmount=initialBalance;
+		
 	}
 	
 	/**
-	 * print balance information
+	 * print original balance information
 	 */
 	public void printInfo()
 	{
 		System.out.println("\nOriginal balance:"+balanceAmount);
 		
 	}
-	/**
-	 * boolean for checking the withdraw is ok
-	 * @param withdrawAmount
-	 * @return true or false
-	 */
+	
 	
 }
