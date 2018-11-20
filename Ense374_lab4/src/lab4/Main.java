@@ -26,7 +26,7 @@ public class Main
 		 */
 		for(int i=0;i<12;i++)
 		{
-		s.setdeposit(500);
+		s.setDeposit(500);
 		s.calculateMonthlyDeposit();
 		s.print();
 		}
@@ -47,7 +47,7 @@ public class Main
 		 */
 		for(int i=0;i<24;i++)
 		{
-		s1.setdeposit(250);
+		s1.setDeposit(250);
 		s1.calculateWeeklyDeposit();
 		s1.print();
 		}

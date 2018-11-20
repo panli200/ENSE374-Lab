@@ -23,7 +23,7 @@ public class SavingAccount extends Account{
 	 * set depositAmount
 	 * @param deposit
 	 */
-	public void setdeposit(double deposit)
+	public void setDeposit(double deposit)
 	{
 		depositAmount=deposit;
 	}
