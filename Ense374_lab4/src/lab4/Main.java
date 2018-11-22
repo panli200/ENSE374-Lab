@@ -14,7 +14,7 @@ public class Main
 		/**
 		 * set up a new account
 		 */
-		Account a=new Account(0);
+		Account a=new Account(0,1111);
 		a.printInfo();
 		/**
 		 * set up a new saving account
@@ -33,9 +33,9 @@ public class Main
 		
 		
 		/**
-		 * set up aother new account
+		 * set up another new account
 		 */
-		Account a1=new Account(0);
+		Account a1=new Account(0,2222);
 		a1.printInfo();
 		/**
 		 * set up another new saving account

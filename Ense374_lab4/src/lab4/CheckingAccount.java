@@ -5,14 +5,15 @@ package lab4;
  *
  */
 public class CheckingAccount extends Account {
+	
 	//checking account has month fee double type 
 	double monthFee=8.0;
 	/**
-	 * Constructor
+	 * Constructor of checking account
 	 * @param initialBalance
 	 */
 	public CheckingAccount(double initialBalance) {
-		super(initialBalance);
+		super(initialBalance,id);
 		// TODO Auto-generated constructor stub
 		balanceAmount=initialBalance;
 	}

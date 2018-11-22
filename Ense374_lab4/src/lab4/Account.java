@@ -11,14 +11,15 @@ public class Account {
 	protected double balanceAmount;
 	protected double depositAmount;	
 	protected double withdrawAmount;
-	
+	protected static int id;
 	/**
 	 * Constructor
 	 * @param initialBalance
 	 */
-	public Account (double initialBalance)
+	public Account (double initialBalance, int ID)
 	{
 		balanceAmount=initialBalance;
+		id=ID;
 		
 	}
 	

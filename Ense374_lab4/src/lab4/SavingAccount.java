@@ -10,14 +10,14 @@ public class SavingAccount extends Account{
 	double monthlyInterestRate;
 	
 	/**
-	 * constructor
-	 * @param initialBalance of the saving account
-	 * 
+	 * constructor of saving account
+	 * @param initialBalance
 	 */
 	public SavingAccount(double initialBalance) {
-		super(initialBalance);
+		super(initialBalance,id);
 		// TODO Auto-generated constructor stub
 		balanceAmount=initialBalance;
+		
 	}
 	/**
 	 * set depositAmount
