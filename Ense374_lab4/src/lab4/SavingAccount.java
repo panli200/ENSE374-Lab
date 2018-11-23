@@ -1,17 +1,18 @@
 package lab4;
 /**
  * ENSE374 LAB4
- * @author panli
+ * @author Li Pan
  * SavingAccount class has deposit , two type interest monthly interest and bi-weekly interest
  * According to different deposit interest to calculate to new balance
  */
 public class SavingAccount extends Account{
 	//double data type for monthly interest rate
-	double monthlyInterestRate;
+	private final double monthlyInterestRate=0.01;
 	
 	/**
-	 * constructor of saving account
-	 * @param initialBalance
+	 * Constructor of saving account
+	 * @param initialBalance double
+	 *
 	 */
 	public SavingAccount(double initialBalance) {
 		super(initialBalance,id);
@@ -21,7 +22,7 @@ public class SavingAccount extends Account{
 	}
 	/**
 	 * set depositAmount
-	 * @param deposit
+	 * @param  deposit double
 	 */
 	public void setDeposit(double deposit)
 	{
@@ -35,10 +36,22 @@ public class SavingAccount extends Account{
 	{
 		return depositAmount;
 	}
+	public void setwithDraw(double deposit)
+	{
+		depositAmount=deposit;
+	}
+	/**
+	 * double getwithDraw()
+	 * @return withDrawAmount
+	 */
+	public double getwithDraw()
+	{
+		return withdrawAmount;
+	}
 	
 	/** 
 	 * set balance amount 
-	 * @param balance is bank balanceAmount
+	 * @param balance  double
 	 */
 	public void setBalance(double balance)
 	{
@@ -55,22 +68,6 @@ public class SavingAccount extends Account{
 	}
 	
 	/**
-	 * set monthly interest rate
-	 * @param deposit
-	 */
-	public void setmonthlyInterestRate(double rate)
-	{
-		monthlyInterestRate=rate;
-	}
-	/**
-	 * 
-	 * @return monthlyInterestRate
-	 */
-	public double getmonthlyInterestRate()
-	{
-		return monthlyInterestRate;
-	}
-	/**
 	 * 
 	 * @return montlyInterestRate/2
 	 */
@@ -78,28 +75,33 @@ public class SavingAccount extends Account{
 	{
 		return monthlyInterestRate/2;
 	}
-	
+
 	/**
 	 * Calculate monthly deposit function
 	 * Function for calculate the balance amount until begin of each month,
 	 * If there is new deposit, add the new deposit to the balance amount
+	 * @return balanceAmount
 	 */
-	public void calculateMonthlyDeposit()
+	public double calculateMonthlyDeposit()
 	{
 		
 		balanceAmount=balanceAmount*(1+monthlyInterestRate);
 		balanceAmount+=depositAmount;
+		return balanceAmount;
 	}
+	
 	/**
 	 * Calculate bi_weekly deposit function
 	 * Function for calculate the balance amount until begin of each two weeks,
 	 * If there is new deposit, add the new deposit to the balance amount
+	 * @return balanceAmount;
 	 */
-	public void calculateWeeklyDeposit()
+	public double calculateWeeklyDeposit()
 	{
 		
 		balanceAmount=balanceAmount*(1+setbiweeklyInterestRate());
 		balanceAmount+=depositAmount;
+		return balanceAmount;
 	}
 	
 	/**

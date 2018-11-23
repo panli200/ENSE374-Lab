@@ -14,13 +14,13 @@ public class Account {
 	protected static int id;
 	/**
 	 * Constructor
-	 * @param initialBalance
+	 * @param initialBalance double 
+	 * @param ID int
 	 */
 	public Account (double initialBalance, int ID)
 	{
 		balanceAmount=initialBalance;
-		id=ID;
-		
+		id=ID;	
 	}
 	
 	/**

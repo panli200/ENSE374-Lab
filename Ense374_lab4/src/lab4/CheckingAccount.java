@@ -10,7 +10,7 @@ public class CheckingAccount extends Account {
 	double monthFee=8.0;
 	/**
 	 * Constructor of checking account
-	 * @param initialBalance
+	 * @param initialBalance double
 	 */
 	public CheckingAccount(double initialBalance) {
 		super(initialBalance,id);
@@ -23,7 +23,23 @@ public class CheckingAccount extends Account {
 	 * When the withdraw amount greater the balance exit
 	 * Otherwise get the new balance
 	 */
-	public void setdeposit(double deposit)
+	public void setDeposit(double deposit)
+	{
+		depositAmount=deposit;
+	}
+	/**
+	 * 
+	 * @return depositAmount
+	 */
+	public double getDeposit()
+	{
+		return depositAmount;
+	}
+	/**
+	 * 
+	 * @param deposit double
+	 */
+	public void setwithDraw(double deposit)
 	{
 		depositAmount=deposit;
 	}
@@ -39,14 +55,14 @@ public class CheckingAccount extends Account {
 	 * get new balance of checking account
 	 * @return balance amount deduct month fee
 	 */
-	public double getbalance()
+	public double getBalance()
 	{	
 		return balanceAmount-monthFee;
 	}
 	/**
 	 * boolean to check the withdraw is valid
-	 * @param withdrawAmount
-	 * @return
+	 * @param withdrawAmount double
+	 * @return true or false
 	 */
 	public boolean withdraw(double withdrawAmount)
 	{

@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 public class EmployeeApplication {
 	
+	private Scanner input;
 	public static void main(String[] args)
     {
 		// eD=>employeeData
@@ -68,8 +69,7 @@ public class EmployeeApplication {
  */
 	public void addEs(Employee[] employeeData)
 	{	
-		//Import 'Scanner(java.util)
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		
 		/**change these unclear variable name:
 		 fNam=>firstName
