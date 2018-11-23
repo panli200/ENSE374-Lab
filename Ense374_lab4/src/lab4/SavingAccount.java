@@ -96,7 +96,7 @@ public class SavingAccount extends Account{
 	 * If there is new deposit, add the new deposit to the balance amount
 	 * @return balanceAmount;
 	 */
-	public double calculateWeeklyDeposit()
+	public double calculateBiWeeklyDeposit()
 	{
 		
 		balanceAmount=balanceAmount*(1+setbiweeklyInterestRate());

@@ -185,7 +185,7 @@ public class Main
          System.out.print("Enter deposit amount: ");
          double amount = input.nextDouble();
          withdrawDeposit.setDeposit(amount);
-         System.out.println("Savings Balance is: " + withdrawDeposit.calculateWeeklyDeposit());
+         System.out.println("Savings Balance is: " + withdrawDeposit.calculateBiWeeklyDeposit());
          mainMenu();
     }
 	/**
