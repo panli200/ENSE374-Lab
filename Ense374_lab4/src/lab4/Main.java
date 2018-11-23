@@ -31,8 +31,9 @@ public class Main
 	 */
     public void menuSavChe(){
         System.out.println("1. Checking");
-        System.out.println("2. Savings");
-        System.out.println("3. Logout");
+        System.out.println("2. Saving");
+        System.out.println("3. MoneyMarketAccount");
+        System.out.println("4. Logout");
         System.out.print("Enter Selection: ");
     }
     /**
@@ -54,6 +55,11 @@ public class Main
         System.out.println("2. BiWeekly Deposit");
         System.out.println("3. Logout");
     }
+    public void menuHighInterest(){
+        System.out.println("1. Deposit");
+        System.out.println("2. Withdraw");
+        System.out.println("3. Logout");
+    }
     /**
      * void get the type of account option from user 
      */
@@ -68,6 +74,8 @@ public class Main
             optionSavings();
             break;
             case 3:
+            optionMoneyMarketSaving();
+            case 4:
             logOut();
             break;
         }
@@ -96,6 +104,7 @@ public class Main
             break;
         }
     }
+    
     /**
      * checking account for deposit
      */
@@ -132,7 +141,7 @@ public class Main
         int inputoption = input.nextInt();
         switch(inputoption){
             case 1:
-            savingsDeosit();
+            savingsDeposit();
             break;
 
             case 2:
@@ -151,7 +160,7 @@ public class Main
     /**
      * saving deposit has two type deposit by monthly or by biweekly
      */
-    public void  savingsDeosit(){
+    public void  savingsDeposit(){
     	menuDepType();
         int inputoption = input.nextInt();
         switch(inputoption){
@@ -167,6 +176,30 @@ public class Main
             logOut();
             break;
         }
+    }
+    /**
+     * option 
+     */
+    public void optionMoneyMarketSaving() {
+    	menuHighInterest();
+    	int inputOptionHighInterest = input.nextInt();
+    	switch(inputOptionHighInterest){
+        case 1:
+        depositHighInterestSaving();
+        break;
+        
+        case 2:
+        withdrawHighInterestSaving();
+        break;
+        
+        case 3:
+        accountInfoHighInterestSaving();
+        break;
+
+        case 4:
+        logOut();
+        break;
+    	}
     }
     /**
      * if the user choose monthly deposit 
@@ -195,7 +228,7 @@ public class Main
         System.out.print("Enter withdraw amount: ");
         double amount = input.nextDouble();
         withdrawDeposit.setDeposit(amount);
-        System.out.println("Savings Balance is: " + withdrawDeposit.getBalance());
+        System.out.println("Saving Balance is: " + withdrawDeposit.getBalance());
         mainMenu();
     }
     /**
@@ -205,6 +238,35 @@ public class Main
         System.out.println("Savings Balance is: " + withdrawDeposit.getBalance());
         mainMenu();
     }
+    /**
+     * check the deposit amount if it over the deposit limit take the deposit 
+     */
+    public void depositHighInterestSaving() {
+    	 System.out.print("The mini deposit is$5000.00. Please enter deposit amount: ");
+    	 double amount = input.nextDouble();
+         System.out.println("Savings Balance is: " + withdraw_deposit.moneyDepositAccept(amount));
+         mainMenu();
+    	
+    }
+    /**
+     * check the withdraw if it over balance return false, else accept withdraw
+     */
+    public void withdrawHighInterestSaving() {
+    	 System.out.print("Enter withdraw amount: ");
+    	 double amount = input.nextDouble();
+         System.out.println("Saving Balance is: " + withdraw_deposit.withdrawAccept(amount));
+         mainMenu();
+    	
+    }
+    /**
+     * give the information for high interest saving account
+     */
+    public void accountInfoHighInterestSaving() {
+    	System.out.println("High Interest Saving Balance is: " + withdrawDeposit.getBalance());
+        mainMenu();
+    	
+    }
+    
     /**
      * whenever user choose logout, end the program running
      */
@@ -216,5 +278,6 @@ public class Main
      */
     SavingAccount withdrawDeposit = new SavingAccount(0);
     CheckingAccount withraw_Deposit= new CheckingAccount(0);
+    MoneyMarketAccount withdraw_deposit= new MoneyMarketAccount(0);
     Scanner input = new Scanner(System.in);
 }
